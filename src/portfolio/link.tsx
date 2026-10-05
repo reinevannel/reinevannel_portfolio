@@ -99,5 +99,6 @@ function appPath(pathname: string) {
 }
 
 function withLang(to: string, lang: Lang) {
-  return lang === "fr" ? to : `${to}?lang=${lang}`;
+  const path = `${siteRoot()}${to}`;
+  return lang === "fr" ? path : `${path}?lang=${lang}`;
 }
