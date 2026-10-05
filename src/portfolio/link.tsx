@@ -70,10 +70,12 @@ export function AppLink({
 }
 
 export function usePathname() {
-  const [path, setPath] = useState(() => (typeof window === "undefined" ? "/" : window.location.pathname));
+  const [path, setPath] = useState(() =>
+    typeof window === "undefined" ? "/" : appPath(window.location.pathname),
+  );
 
   useEffect(() => {
-    const sync = () => setPath(window.location.pathname);
+    const sync = () => setPath(appPath(window.location.pathname));
     listeners.add(sync);
     window.addEventListener("popstate", sync);
     return () => {
