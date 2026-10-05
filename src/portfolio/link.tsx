@@ -85,6 +85,19 @@ export function usePathname() {
   return path;
 }
 
+function siteRoot() {
+  const value = import.meta.env.BASE_URL || "/";
+  return value.endsWith("/") ? value.slice(0, -1) : value;
+}
+
+function appPath(pathname: string) {
+  const base = siteRoot();
+  if (!base) return pathname || "/";
+  if (pathname === base || pathname === `${base}/`) return "/";
+  if (pathname.startsWith(`${base}/`)) return pathname.slice(base.length) || "/";
+  return pathname || "/";
+}
+
 function withLang(to: string, lang: Lang) {
   return lang === "fr" ? to : `${to}?lang=${lang}`;
 }
