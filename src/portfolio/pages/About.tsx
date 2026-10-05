@@ -18,7 +18,7 @@ export function About() {
       <header className="portrait-wrap">
         <div>
           <div className="portrait">
-            <img src="/avatar.jpg" alt={t("about.portrait")} width={640} height={640} decoding="async" />
+            <img src={`${import.meta.env.BASE_URL}avatar.jpg`} alt={t("about.portrait")} width={640} height={640} decoding="async" />
           </div>
           <p className="font-display" style={{ color: "var(--gold)", margin: "0.8rem 0 0" }}>Reine Vannel</p>
           <p className="script-note" style={{ marginTop: "0.15rem" }}>{t("about.note1")}</p>
