@@ -190,7 +190,7 @@ function ProjectRow({
         </div>
       </div>
       <div className="media" style={{ boxShadow: hot ? `0 22px 60px ${project.color}33` : undefined }}>
-        <img src={project.image} alt="" width={960} height={600} loading="lazy" decoding="async" style={{ filter: hot ? "saturate(1.05)" : "saturate(0.92) brightness(0.92)" }} />
+        <img src={`${import.meta.env.BASE_URL}${project.image.slice(1)}`} alt="" width={960} height={600} loading="lazy" decoding="async" style={{ filter: hot ? "saturate(1.05)" : "saturate(0.92) brightness(0.92)" }} />
         <span className="year-badge" style={{ color: project.color }}>{project.year}</span>
       </div>
     </article>
