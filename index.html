@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reine Vannel — Studio UX/UI & Front-end</title>
+    <meta
+      name="description"
+      content="Studio UX/UI et front-end d'Angélique M. R. Vannel, établi en France, Territoire de Belfort, à la frontière suisse. Interfaces en français, anglais, allemand, slovaque et tchèque."
+    />
+    <meta name="author" content="Angélique M. R. Vannel" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#060B14" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=JetBrains+Mono:wght@300;400;500&display=swap"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Reine Vannel Studio",
+        "email": "reinestudio@proton.me",
+        "founder": { "@type": "Person", "name": "Angélique Maria Reine Vannel" },
+        "address": { "@type": "PostalAddress", "addressRegion": "Territoire de Belfort", "addressCountry": "FR" },
+        "areaServed": ["FR", "CH", "SK", "CZ"],
+        "availableLanguage": ["fr", "en", "de", "sk", "cs"],
+        "sameAs": ["https://www.linkedin.com/in/reine-vannel-a01934438/"]
+      }
+    </script>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("rv-theme");
+          if (t === "light") document.documentElement.classList.add("light");
+          var q = new URLSearchParams(location.search).get("lang");
+          var l = q || localStorage.getItem("rv-lang");
+          if (l === "en" || l === "de" || l === "fr" || l === "sk" || l === "cs") {
+            document.documentElement.lang = l;
+            document.documentElement.dataset.lang = l;
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
