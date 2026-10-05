@@ -744,7 +744,7 @@
   }
   .portrait { width: 132px; height: 132px; margin-inline: auto; }
   .block { margin-top: 2.4rem; }
-  .about-intro, .about-origin, .lede { font-size: 0.98rem; }
+  .about-intro, .lede { font-size: 0.98rem; }
   .ghost-num { font-size: clamp(2.8rem, 14vw, 3.8rem); }
   .project-row { padding: 1.6rem 0; gap: 1.1rem; }
   .project-row .copy, .card-body, .service-btn { min-width: 0; }
@@ -1562,8 +1562,6 @@
 @media (max-width: 760px) {
   .edu-grid { grid-template-columns: 1fr; }
 }
-
-.about-origin { margin-top: 1.15rem; max-width: 68ch; line-height: 1.85; }
 
 .quick-dock {
   position: fixed;

@@ -28,7 +28,6 @@ export function About() {
           <p className="kicker">— {t("about.kicker")}</p>
           <h1 className="display">{t("about.title")}</h1>
           <p className="lede about-intro">{highlight(t("about.intro"), MARKS[lang])}</p>
-          <p className="lede about-origin">{t("about.origin")}</p>
           <div className="cta-row" style={{ marginTop: "1.4rem" }}>
             <a className="text-link" href={LINKEDIN} target="_blank" rel="noopener noreferrer" aria-label={`LinkedIn (${t("a11y.external")})`}>LinkedIn ↗</a>
             <a className="text-link" href={LINKEDIN_CERTS} target="_blank" rel="noopener noreferrer" aria-label={`${t("about.certs")} (${t("a11y.external")})`}>{t("about.certs")} ↗</a>
