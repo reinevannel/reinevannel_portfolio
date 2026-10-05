@@ -31,7 +31,7 @@ export function Projects() {
           {list.map((project) => (
             <article key={project.id} className="project-card">
               <div className="shot">
-                <img src={project.image} alt="" width={1400} height={788} loading="lazy" decoding="async" />
+                <img src={`${import.meta.env.BASE_URL}${project.image.slice(1)}`} alt="" width={1400} height={788} loading="lazy" decoding="async" />
                 <div className="shot-shade" />
                 <div className="shot-tags">
                   {project.tags.slice(0, 3).map((tag) => <span key={tag} className="tag lang-tag">{tag}</span>)}
