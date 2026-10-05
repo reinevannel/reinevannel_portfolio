@@ -72,7 +72,6 @@ npm run preview   # sert dist/ sur http://127.0.0.1:4173
 ```
 
 `npm run build` doit impérativement se terminer sans erreur avant toute publication.  
-Le dossier à mettre en ligne est **`dist/`**, jamais `src/` et jamais `node_modules/`.
 
 ---
 
